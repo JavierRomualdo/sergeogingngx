@@ -1,0 +1,116 @@
+<app-getscript>
+  mailservice();
+</app-getscript>
+<!--Horarios-->
+<section class="cta pb-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <div class="cta-inner text-center rounded">
+            <h2 class="section-heading mb-5">
+              <span class="section-heading-lower">
+                <i class="fa fa-calendar" aria-hidden="true"></i> 
+                Horarios de atención
+              </span>
+            </h2>
+            <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+            <li class="list-unstyled-item list-hours-item d-flex" *ngFor="let horario of horarios">
+                <strong>
+                  {{horario.dia}}
+                </strong>
+                <span class="ml-auto">{{horario.horas}}</span>
+            </li>
+            </ul>
+            <p class="address mb-4">
+              <em>
+                <strong>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i> 
+                  Urbanización Miraflores II Etapa Manzana S Lote 12
+                </strong>
+                <br>
+                <span class="font-weight-bold">Castilla, Piura, Piura</span>
+              </em>
+            </p>
+            <div class="row">
+              <div class="col-md-6">
+                <small>
+                  <i class="fa fa-phone rounded bg-primary text-white p-1" aria-hidden="true"></i>
+                  <span class="font-weight-bold"> Teléfono</span>
+                </small>
+                <br>
+                <div class="font-weight-bold">969 620 162</div>
+              </div>
+              <div class="col-md-6">
+                <small>
+                  <i class="fa fa-envelope rounded bg-primary text-white p-1" aria-hidden="true"></i>
+                  <span class="font-weight-bold"> Email</span>
+                </small>
+                <br>
+                <div class="font-weight-bold">
+                  sergeoingcons@gmail.com
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="page-section formulario">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <br>
+        <h3 class="section-heading">
+          <i class="fa fa-pencil" aria-hidden="true"></i> 
+          Contáctanos
+        </h3>
+        <h5 class="text-white font-weight-bold">Respondemos en menos de 24 horas.</h5>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-12">
+        <form id="contactForm" (ngSubmit)="enviarMensaje()" name="sentMessage" novalidate="novalidate">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input class="form-control" id="name" type="text" placeholder="Nombre *" required="required" 
+                data-validation-required-message="Por favor ingrese su nombre.">
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                <input class="form-control" id="email" type="email" placeholder="Email *" required="required" 
+                data-validation-required-message="Por favor ingrese su correo electrónico.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                  <input class="form-control" id="phone" type="tel" placeholder="Teléfono *" required="required" 
+                  data-validation-required-message="Por favor ingrese su número de teléfono.">
+                  <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                  <textarea class="form-control" id="message" placeholder="Mensaje *" required="required" 
+                  data-validation-required-message="Escriba su mensaje."></textarea>
+                  <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-lg-12 text-center">
+              <div id="success"></div>
+              <button id="sendMessageButton" class="btn btn-primary text-uppercase" type="submit">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i> 
+                Enviar
+              </button>
+            </div>
+          </div>
+          <br>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,129 @@
+<!--Nuestros valores-->
+<section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 img-thumbnail rounded" 
+        src="assets/img/intro.jpg" alt="foto intro">
+        <div class="intro-text text-center bg-faded p-3 rounded">
+          <h2 class="section-heading">
+            <!--<span class="section-heading-upper">Fresh Coffee</span>-->
+            <span class="section-heading font-weight-bold h3">Nuestros valores</span>
+          </h2>
+          <p class="mb-1">
+            Son los principios que nos guían, nos inspiran y nos respaldan.
+          </p>
+          <h2 class="section-heading-lower mb-1">
+            <span class="section-heading-upper font-weight-bold h4">
+              <i class="fa fa-paperclip size-font-title" aria-hidden="true"></i>
+              El Conocimiento
+            </span>
+          </h2>
+          <ul class="lista mb-1">
+            <p class="mb-1">Aprendemos y crecemos compartiendo conocimiento y recursos.</p>
+            <li>
+              <i class="fa fa-check" aria-hidden="true"></i> 
+              Evolución   
+              <i class="fa fa-check" aria-hidden="true"></i> 
+              Excelencia
+            </li>
+            <li>
+              <i class="fa fa-check" aria-hidden="true"></i> 
+              Identidad
+              <i class="fa fa-check" aria-hidden="true"></i> 
+              Trabajo en equipo
+            </li>
+          </ul>
+          <h2 class="section-heading-lower mb-1">
+            <span class="section-heading-upper font-weight-bold h4">
+              <i class="fa fa-paperclip size-font-title" aria-hidden="true"></i>
+              Innovación
+            </span>
+          </h2>
+          <ul class="lista mb-1">
+            <li>
+              <i class="fa fa-check" aria-hidden="true"></i> 
+              Evolución
+              <i class="fa fa-check" aria-hidden="true"></i> 
+              Riesgo
+              <i class="fa fa-check" aria-hidden="true"></i> 
+              Retos
+              <i class="fa fa-check" aria-hidden="true"></i> 
+              Metas
+            </li>
+          </ul>
+          <h2 class="section-heading-lower mb-1">
+            <span class="section-heading-upper font-weight-bold h4">
+              <i class="fa fa-paperclip size-font-title" aria-hidden="true"></i>
+              Nuestra gente
+            </span>
+          </h2>
+          <ul class="lista mb-1">
+            <li>
+              <i class="fa fa-check" aria-hidden="true"></i>
+              Respeto
+              <i class="fa fa-check" aria-hidden="true"></i>
+              Profesionalismo
+            </li>
+            <li>
+              <i class="fa fa-check" aria-hidden="true"></i>
+              Reconocimiento
+              <i class="fa fa-check" aria-hidden="true"></i>
+              Desarrollo
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="cta pt-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 mx-auto">
+          <div class="cta-inner text-center rounded">
+            <h2 class="section-heading mb-4">
+              <span class="h5">Nuestro compromiso</span>
+              <span class="section-heading-lower">
+                EXPERIENCIA, CALIDAD, CONFIANZA Y SEGURIDAD
+              </span>
+            </h2>
+            <p class="mb-0">
+              SERGEOING S.R.L somos una empresa al  servicio de la ingeniería garantizando nuestros 
+              estudios con las soluciones técnicas más adecuadas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="cta pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 mx-auto">
+        <div class="cta-inner text-center pt-4 rounded">
+          <h2 class="section-heading text-center mb-4">
+            <span class="section-heading-lower">
+              Perfil de nuestro equipo técnico profesional
+            </span>
+          </h2>
+          
+          <div class="row" *ngFor="let colaborador of colaboradores">
+            <div class="col-xl-3 col-md-3">
+              <div class="col colaborador text-center text-white rounded border border-white">
+                <br>
+                <img src="{{colaborador.src}}" class="img rounded-circle" 
+                  alt="{{colaborador.nombres}}" width="140px" height="140px">
+                <div class="font-weight-bold my-3" style="font-size: 18px;">{{colaborador.nombres}}</div>
+              </div>
+            </div>
+            <div class="col-xl-9 col-md-9 text-justify">
+              {{colaborador.descripcion}}
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

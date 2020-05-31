@@ -1,0 +1,53 @@
+<section class="cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-10 mx-auto">
+          <div class="cta-inner text-center pt-4 rounded">
+            <h2 class="section-heading text-center mb-4">
+              <span class="section-heading-lower">
+                Servicios
+              </span>
+            </h2>
+            <p class="mb-3">
+              <span class="h5">
+                ¡Tenemos más de 10 servicios al alcanse del cliente!
+              </span>
+            </p>
+            <!--Carousel-->
+            <div class="container">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" *ngFor="let servicio of servicios; index as i;"
+                      [attr.data-slide-to]="i" [ngClass]="{'active': i==0}"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item" *ngFor="let servicio of servicios; index as i"
+                    [ngClass]="{'active': i==0}">
+                    <img class="d-block w-100 rounded" src="{{servicio.src}}" alt="{{servicio.alt}}">
+                    <div class="carousel-caption d-none d-md-block">
+                      <div class="bg-faded p-3 d-flex ml-auto rounded">
+                        <h2 class="section-heading mb-0">
+                          <span class="section-heading-upper text-dark">
+                              {{servicio.descripcion}}
+                          </span>
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+            <!--/ Carousel-->
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
