@@ -17,9 +17,9 @@ function mailservice() {
 
             Email.send({
                 Host : "smtp.gmail.com",
-                Username : "javierromualdo2014@gmail.com",
-                Password : "ncihprirpnwsrccc",
-                To : 'javierromualdo2014@gmail.com', // to = a (va el correo de la empresa)
+                Username : "sergeoingcons@gmail.com",
+                Password : "geologiaing2018",
+                To : 'sergeoingcons@gmail.com', // to = a (va el correo de la empresa)
                 From : email, // from = desde
                 Subject : "Has recibido un nuevo mensaje desde el formulario "+
                     "de contacto de tu página web.", // titulo del correo
